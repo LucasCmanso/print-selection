@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* button {
+    background-color: darkturquoise;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease;
+}
+
+* button:focus {
+    outline: none;
+    transform: scale(0.90);
+}
+
+#btn_close {
+    background-color: red;
+}
+
+#btn_submit {
+    margin-left: 150px;
+    background-color: rgb(19, 226, 19);
+}
+
+#btn_submit:disabled {
+    opacity: 0.40;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+@media print {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin: 0;
+    }
+}
+
+.blocks {
+    border: 1px solid gray;
+    margin: 10px 0px;
+    width: 500px;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.blocks.selection {
+    opacity: 0.4;
+}
+
+.sidebar {
+    height: 60vh;
+    width: 30vw;
+    border: 1px solid black;
+    position: fixed;
+    padding: 10px;
+    z-index: 9999;
+    background-color: #fff;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0%);
+}
+
+.sidebar button {
+    margin: 8px 0;
+}
+
+.checkBoxes {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#select_all {
+    font-size: 20px;
+    font-weight: bold;
+}
